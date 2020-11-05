@@ -1,6 +1,6 @@
 package western;
 
-public class Humain{
+public abstract class Humain{
     
     //attributs
     String nom;
@@ -14,19 +14,18 @@ public class Humain{
 
     //méthodes
 
-    public void parle(String){
+    public abstract void parle(String){
         system.out.println(String);
     }
 
-    public void sePresenter(){
+    public abstract void sePresenter(){
+    }
+
+    public abstract String quelEstTonNom(){
 
     }
 
-    public String quelEstTonNom(){
-
-    }
-
-    public String getBoisson(){
+    public abstract String getBoisson(){
 
     }
 }

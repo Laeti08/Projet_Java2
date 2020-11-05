@@ -4,8 +4,8 @@ public class DameDetresse extends Humain implements VisagePale{
     
     //attributs
 
-    String etat;
-    String couleurRobe;
+    public String etat;
+    public String couleurRobe;
 
     //Contructeur
     public DameDetresse(String nom, String boissonFavorite, String etat, String couleurRobe){
@@ -28,7 +28,7 @@ public class DameDetresse extends Humain implements VisagePale{
 
     }
 
-    void sePresenter(){
+    public void sePresenter(){
 
     }
 
