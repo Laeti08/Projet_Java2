@@ -1,25 +1,32 @@
 package western;
 
 public class Humain{
+    
+    //attributs
     String nom;
     String boissonFavorite;
 
-    //méthode
-    public void parle (String){
+    //constructeurs
+    public Humain(String name, String FavoriteDrink){
+        nom = name;
+        boissonFavorite = FavoriteDrink;
+    }
+
+    //méthodes
+
+    void parle(String){
+        system.out.println(String);
+    }
+
+    void sePresenter(){
 
     }
 
-    public void sePresenter(){
+    String quelEstTonNom(){
 
     }
 
-    public String quelEstTonNom (){
+    String getBoisson(){
 
     }
-
-    public String getBoisson () {
-        
-    }
-
-
 }
