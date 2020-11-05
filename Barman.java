@@ -5,9 +5,9 @@ public class Barman extends Humain{
     String nomBar;
 
     //Constructeur
-    public Barman(String nameBar,String name, String FavoriteDrink){
-        super(name, FavoriteDrink);
-        this.nomBar = nameBar;
+    public Barman(String nomBar,String nom, String boissonFavorite){
+        super(nom, boissonFavorite);
+        this.nomBar = nomBar;
         
     }
 
@@ -22,7 +22,7 @@ public class Barman extends Humain{
     }
 
     public void sePresenter(){
-        
+
     }
 
 }

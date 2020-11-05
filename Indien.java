@@ -6,10 +6,10 @@ public class Indien extends Humain{
     String totem;
 
     //Constructeur
-    public Indien(int nbFeathers, String totems,String name, String FavoriteDrink){
-        super(name, FavoriteDrink);
-        this.nbPlumes = nbFeathers;
-        this.totem =totems;
+    public Indien(int nbPlumes, String totem,String nom, String boissonFavorite){
+        super(nom, boissonFavorite);
+        this.nbPlumes = nbPlumes;
+        this.totem =totem;
     }
 
     //Methode

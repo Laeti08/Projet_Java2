@@ -9,13 +9,12 @@ public class Brigand extends Humain{
     private int award;
 
     // Constructeur
-    public Brigand(int nbDamesKidnap, int award, String style, Boolean estInPrison, String name, String FavoriteDrink) {
-        super(name, FavoriteDrink);
-        this.nbDamesEnlevees = nbDamesKidnap;
-        this.award = award;
-        this.recompense=award;
-        this.look=style;
-        this.estEnPrison=estInPrison;
+    public Brigand(int nbDamesEnlevees, int recompense, String look, Boolean estEnPrison, String nom, String boissonFavorite) {
+        super(nom, boissonFavorite);
+        this.nbDamesEnlevees = nbDamesEnlevees;
+        this.recompense = recompense;
+        this.look=look;
+        this.estEnPrison=estEnPrison;
     }
 
     //Methode
