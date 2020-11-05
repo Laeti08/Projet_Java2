@@ -11,11 +11,11 @@ public class Brigand extends Humain{
     // Constructeur
     public Brigand(int nbDamesKidnap, int award, String style, Boolean estInPrison, String name, String FavoriteDrink) {
         super(name, FavoriteDrink);
-        nbDamesEnlevees = nbDamesKidnap;
+        this.nbDamesEnlevees = nbDamesKidnap;
         this.award = award;
-    recompense=award;
-    look=style;
-    estEnPrison=estInPrison;
+        this.recompense=award;
+        this.look=style;
+        this.estEnPrison=estInPrison;
     }
 
     //Methode

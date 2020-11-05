@@ -8,8 +8,8 @@ public class Cowboy extends Humain{
     //Constructeur
     public Cowboy(int popularity, String adj,String name, String FavoriteDrink){
         super(name, FavoriteDrink);
-        popularite = popularity;
-        adjectif = adj;
+        this.popularite = popularity;
+        this.adjectif = adj;
     }
 
     //Methode

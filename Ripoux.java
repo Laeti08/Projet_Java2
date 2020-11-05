@@ -11,10 +11,10 @@ public class Ripoux extends Sherif implements HorsLaLoi{
     //Constructeur
     public Ripoux(int nbDamesKidnap, int award, String style, Boolean estInPrison,int nbBrigandEmprisonne,int popularity,String adj,String name,String FavoriteDrink){
         super(nbBrigandEmprisonne, popularity, adj, name, FavoriteDrink);
-    nbDamesEnlevees=nbDamesKidnap;
-    recompense=award;
-    look=style;
-    estEnPrison=estInPrison;
+    this.nbDamesEnlevees=nbDamesKidnap;
+    this.recompense=award;
+    this.look=style;
+    this.estEnPrison=estInPrison;
     }
 
 }
