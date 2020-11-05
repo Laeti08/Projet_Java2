@@ -7,26 +7,26 @@ public class Humain{
     String boissonFavorite;
 
     //constructeurs
-    public Humain(String name, String FavoriteDrink){
-        nom = name;
-        boissonFavorite = FavoriteDrink;
+    public Humain(String nom, String boissonFavorite){
+        this.nom = nom;
+        this.boissonFavorite = boissonFavorite;
     }
 
     //méthodes
 
-    void parle(String){
+    public void parle(String){
         system.out.println(String);
     }
 
-    void sePresenter(){
+    public void sePresenter(){
 
     }
 
-    String quelEstTonNom(){
+    public String quelEstTonNom(){
 
     }
 
-    String getBoisson(){
+    public String getBoisson(){
 
     }
 }
