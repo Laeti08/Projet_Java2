@@ -2,8 +2,8 @@ package western;
 
 public class Cowboy extends Humain{
     //Attribut
-    int popularite;
-    String adjectif;
+    public int popularite;
+    public String adjectif;
 
     //Constructeur
     public Cowboy(int popularite, String adjectif,String nom, String boissonFavorite){

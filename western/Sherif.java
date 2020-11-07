@@ -3,7 +3,7 @@ package western;
 public class Sherif extends Cowboy{
 
      //Attribut
-     int nbBrigandCoffre;
+     public int nbBrigandCoffre;
      
  
      //Constructeur

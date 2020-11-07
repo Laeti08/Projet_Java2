@@ -2,10 +2,10 @@ package western;
 
 public class Ripoux extends Sherif implements HorsLaLoi{
     //Attribut
-    int nbDamesEnlevees;
-    int recompense;
-    String look;
-    Boolean estEnPrison;
+    public int nbDamesEnlevees;
+    public int recompense;
+    public String look;
+    public Boolean estEnPrison;
     
 
     //Constructeur

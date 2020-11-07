@@ -2,7 +2,7 @@ package western;
 
 public class Barman extends Humain{
     //Attribut
-    String nomBar;
+    public String nomBar;
 
     //Constructeur
     public Barman(String nomBar,String nom, String boissonFavorite){

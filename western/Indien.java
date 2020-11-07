@@ -2,8 +2,8 @@ package western;
 
 public class Indien extends Humain{
     //Attribut
-    int nbPlumes;
-    String totem;
+    public int nbPlumes;
+    public String totem;
 
     //Constructeur
     public Indien(int nbPlumes, String totem,String nom, String boissonFavorite){
