@@ -14,8 +14,8 @@ public class Humain{
 
     //méthodes
 
-    public void parle(String){
-        system.out.println(String);
+    public void parle(String phrase){
+        System.out.println(phrase);
     }
 
     public void sePresenter(){

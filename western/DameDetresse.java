@@ -16,19 +16,32 @@ public class DameDetresse extends Humain implements VisagePale{
     
     //Méthodes 
 
-    public void seFaireEnlever(Brigand){
+    public void seFaireEnlever(Brigand nomBrigand){
+        this.etat="kidnappé";
+        parle("Au secours!! Au secours!!");
+        parle(nomBrigand+"lachez moi!!!");
         
     }
 
-    public void seFaireLiberer(Cowboy){
-
+    public void seFaireLiberer(Cowboy nomCowboy){
+        this.etat="liberé";
+        talk("Merci infiniment Mr"+nomCowboy);
     }
 
     public void changerRobe(String couleur){
+        this.couleurRobe=couleur;
+        
 
     }
 
-    void sePresenter(){
+    public String quelEstTonNom(){
+        return "Lady"+this.nom+this.couleurRobe;
+         
+    }
+
+    public void sePresenter(){
+        super.sePresenter();
+        parle("Bonjour, je me presente"+this.name+", et regardez ma jolie robe de couleur"+this.couleurRobe);
 
     }
 
