@@ -28,10 +28,10 @@ public class Sherif extends Cowboy{
      }
  
      public String quelEstTonNom(){
-      return "Sherif"+this.nom+this.nbBrigandCoffre;
+         return "Sherif"+this.nom+this.nbBrigandCoffre;
      }
 
      public void sePresenter(){
-      parle("Sherif"+this.name+"pour vous servir"+this.nbBrigandCoffre);
-    }
+      parle("Sherif"+this.nom+"pour vous servir"+this.nbBrigandCoffre);
+     }
 }

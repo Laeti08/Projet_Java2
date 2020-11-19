@@ -25,7 +25,7 @@ public class DameDetresse extends Humain implements VisagePale{
 
     public void seFaireLiberer(Cowboy nomCowboy){
         this.etat="liberé";
-        talk("Merci infiniment Mr"+nomCowboy);
+        parle("Merci infiniment Mr"+nomCowboy);
     }
 
     public void changerRobe(String couleur){
@@ -41,7 +41,7 @@ public class DameDetresse extends Humain implements VisagePale{
 
     public void sePresenter(){
         super.sePresenter();
-        parle("Bonjour, je me presente"+this.name+", et regardez ma jolie robe de couleur"+this.couleurRobe);
+        parle("Bonjour, je me presente"+this.nom+", et regardez ma jolie robe de couleur"+this.couleurRobe);
 
     }
 
