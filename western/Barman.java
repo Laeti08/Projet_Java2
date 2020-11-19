@@ -14,13 +14,13 @@ public class Barman extends Humain{
 
 
     //Methode
-    public void sert(Humain){
-        parle("Tiens " + Humain.nom + ", voici " + Humain.boissonFavorite + "." )
+    public void sert(Humain nomHumain){
+        parle("Tiens " + nomHumain.nom + ", voici " + nomHumain.boissonFavorite + "." );
 
     }
 
-    public void parle(String){
-        system.out.println(String)
+    public void parle(String phrase){
+        System.out.println(phrase);
 
     }
 
