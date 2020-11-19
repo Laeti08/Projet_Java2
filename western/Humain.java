@@ -1,9 +1,9 @@
 package western;
 
-public class Humain{
+public abstract class Humain{
     
     //attributs
-    String nom;
+    protected String nom;
     String boissonFavorite;
 
     //constructeurs
@@ -15,18 +15,18 @@ public class Humain{
     //méthodes
 
     public void parle(String phrase){
-        System.out.println(phrase);
+        System.out.println(nom+":"+phrase);
     }
 
     public void sePresenter(){
-
+        parle("");
     }
 
-    public String quelEstTonNom(){
-
+    protected String quelEstTonNom(){
+        return this.nom;
     }
 
     public String getBoisson(){
-
+        return this.boissonFavorite;
     }
 }

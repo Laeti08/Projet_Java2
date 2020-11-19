@@ -45,4 +45,10 @@ public class DameDetresse extends Humain implements VisagePale{
 
     }
 
+	@Override
+	public void ascalp(Indien nomIndien) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

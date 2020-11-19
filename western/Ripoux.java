@@ -17,4 +17,22 @@ public class Ripoux extends Sherif implements HorsLaLoi{
     this.estEnPrison=estEnPrison;
     }
 
+    @Override
+    public void seFaireEmprisonner() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void kidnapperDame() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public String getRecompense() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 }
