@@ -15,7 +15,7 @@ public abstract class Humain{
     //méthodes
 
     public void parle(String phrase){
-        System.out.println(this.nom + " : " + phrase);
+        System.out.println(this.nom + " : " +phrase);
     }
 
     public void sePresenter(){

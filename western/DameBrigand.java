@@ -19,13 +19,13 @@ public class DameBrigand extends DameDetresse implements HorsLaLoi{
     }
 
     @Override
-    public void seFaireEmprisonner(CowBoy nomCowboy) {
+    public void seFaireEmprisonner(Cowboy nomCowboy) {
         // TODO Auto-generated method stub
 
     }
 
     @Override
-    public void kidnapperDame(Dame nomDame) {
+    public void kidnapperDame(DameDetresse nomDame) {
         // TODO Auto-generated method stub
 
     }

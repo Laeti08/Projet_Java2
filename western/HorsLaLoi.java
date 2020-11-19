@@ -2,11 +2,11 @@ package western;
 
 public interface HorsLaLoi{
 
-    public void seFaireEmprisonner(CowBoy nomCowboy);
+    public void seFaireEmprisonner(Cowboy nomCowboy);
 
     
     
-    public void kidnapperDame(Dame nomDame); 
+    public void kidnapperDame(DameDetresse nomDame); 
 
     public String getRecompense();
     

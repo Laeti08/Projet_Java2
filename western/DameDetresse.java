@@ -23,7 +23,7 @@ public class DameDetresse extends Humain implements VisagePale{
         
     }
 
-    public void seFaireLiberer(Cowboy nomCowboy){
+    public void seFaireLiberer(String nomCowboy){
         this.etat="liberé";
         parle("Merci infiniment Mr"+nomCowboy);
     }

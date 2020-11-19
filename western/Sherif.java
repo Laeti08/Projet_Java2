@@ -7,8 +7,9 @@ public class Sherif extends Cowboy{
      
  
      //Constructeur
-     public Sherif(int nbBrigandCoffreEmprisonne, int popularite, String adjectif, String nom, String boissonFavorite){
-        super(popularite, adjectif,nom, boissonFavorite);
+     public Sherif(int nbBrigandCoffreEmprisonne, int popularite, String adjectif, String nom, String boissonFavorite,Boolean estPrecis){
+        super(popularite,adjectif,nom,boissonFavorite,estPrecis);
+      
         this.nbBrigandCoffre = nbBrigandCoffre;
          
      }
