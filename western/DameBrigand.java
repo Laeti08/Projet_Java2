@@ -17,4 +17,22 @@ public class DameBrigand extends DameDetresse implements HorsLaLoi{
         this.look = look;
         this.estEnPrison = estEnPrison;
     }
+
+    @Override
+    public void seFaireEmprisonner(CowBoy nomCowboy) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void kidnapperDame(Dame nomDame) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public String getRecompense() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }
