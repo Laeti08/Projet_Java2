@@ -3,7 +3,7 @@ package western;
 public abstract class Humain{
     
     //attributs
-    String nom;
+    protected String nom;
     String boissonFavorite;
 
     //constructeurs
@@ -19,14 +19,14 @@ public abstract class Humain{
     }
 
     public void sePresenter(){
-
+        parle("");
     }
 
-    public String quelEstTonNom(){
-
+    protected String quelEstTonNom(){
+        return this.nom;
     }
 
     public String getBoisson(){
-
+        return this.boissonFavorite;
     }
 }
