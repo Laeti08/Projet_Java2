@@ -2,7 +2,7 @@ package western;
 
 public class Barman extends Humain{
     //Attribut
-    String nomBar;
+    public String nomBar;
 
     //Constructeur
     public Barman(String nomBar,String nom, String boissonFavorite){
@@ -15,16 +15,17 @@ public class Barman extends Humain{
 
     //Methode
     public void sert(Humain){
+        parle("Tiens " + Humain.nom + ", voici " + Humain.boissonFavorite + "." )
 
     }
 
     public void parle(String){
-        system.out.println("")
+        system.out.println(String)
 
     }
 
     public void sePresenter(){
-
+        parle("Bienvenue au bar " + this.nomBar + ". Je suis " + this.nom + ", et je suis le barman. Si vous comptez m'offrir à boire, offrez moi " + this.boissonFavorite + ".");
     }
 
 }

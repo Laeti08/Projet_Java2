@@ -3,7 +3,7 @@ package western;
 public class Sherif extends Cowboy{
 
      //Attribut
-     int nbBrigandCoffre;
+     public int nbBrigandCoffre;
      
  
      //Constructeur
@@ -15,19 +15,23 @@ public class Sherif extends Cowboy{
  
      //Methode
  
-     public void coffrer(Brigand){
+     public void coffrer(Brigand nomBrigand){
+      this.nbBrigandCoffre++;        
+
  
      }
  
-     public void rechercher(Brigand){
+     public void rechercher(Brigand nomBrigand){
+        parle("Ce Brigand du nom de "+nomBrigand+" est recherché");
+        //photo du brigand ?
  
      }
  
      public String quelEstTonNom(){
-         
+      return "Sherif"+this.nom+this.nbBrigandCoffre;
      }
 
      public void sePresenter(){
-        
+      parle("Sherif"+this.name+"pour vous servir"+this.nbBrigandCoffre);
     }
 }

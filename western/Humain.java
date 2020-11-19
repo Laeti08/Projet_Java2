@@ -14,18 +14,19 @@ public abstract class Humain{
 
     //méthodes
 
-    public abstract void parle(String){
-        system.out.println(String);
+    public void parle(String phrase){
+        System.out.println(this.nom + " : " + phrase);
     }
 
-    public abstract void sePresenter(){
-    }
-
-    public abstract String quelEstTonNom(){
+    public void sePresenter(){
 
     }
 
-    public abstract String getBoisson(){
+    public String quelEstTonNom(){
+
+    }
+
+    public String getBoisson(){
 
     }
 }
