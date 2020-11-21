@@ -6,17 +6,17 @@ public class Brigand extends Humain implements HorsLaLoi{
     public int recompense;
     public String look;
     public Boolean estEnPrison;
-    public Boolean estblesse;
+    public Boolean estBlesse;
     
 
     // Constructeur
-    public Brigand(int nbDamesEnlevees, int recompense, String look, Boolean estEnPrison, String nom, String boissonFavorite) {
+    public Brigand(int nbDamesEnlevees, int recompense, String look, String nom, String boissonFavorite) {
         super(nom, boissonFavorite);
         this.nbDamesEnlevees = nbDamesEnlevees;
         this.recompense = recompense;
         this.look=look;
-        this.estEnPrison=estEnPrison;
-        this.estblesse = false;
+        this.estEnPrison=false;
+        this.estBlesse = false;
     }
 
     //Methode

@@ -4,14 +4,16 @@ import java.util.Random;
 public class Cowboy extends Humain{
     //Attribut
     public int popularite;
-    public String adjectif;
+    public String adjectif1;
+    public String adjectif2;
     public Boolean estPrecis;
 
     //Constructeur
-    public Cowboy(int popularite, String adjectif,String nom, String boissonFavorite, Boolean estprecis){
+    public Cowboy(int popularite, String adjectif1,String adjectif2,String nom, String boissonFavorite, Boolean estprecis){
         super(nom, boissonFavorite);
         this.popularite = popularite;
-        this.adjectif = adjectif;
+        this.adjectif1 = adjectif1;
+        this.adjectif2 = adjectif2;
         this.estPrecis=estPrecis;
     }
 
@@ -22,7 +24,7 @@ public class Cowboy extends Humain{
     }
 
     public void tirer(Brigand Brigand){
-        System.out.println(this.nom +" " +  this.adjectif + " tire sur " + Brigand.nom + " ! ce gredin l'a bien mérité de toute façon ! ");
+        System.out.println(this.nom +" " +  this.adjectif1 + " tire sur " + Brigand.nom + " ! ce gredin l'a bien mérité de toute façon ! ");
         int jetdes = de100();
         
         if((jetdes <= 20 && this.estPrecis == true) || jetdes <= 10){
@@ -31,13 +33,13 @@ public class Cowboy extends Humain{
         
         else if((jetdes <= 80 && this.estPrecis == true) || jetdes <= 65){
             
-            if(Brigand.estblesse == false){
+            if(Brigand.estBlesse == false){
                 System.out.println(Brigand.nom + "est salement touché mais n'est pas pas encore hors d'état de nuire ! Encore une comme ça et son compte sera réglé !");
-                Brigand.estblesse = true;
+                Brigand.estBlesse = true;
             }
             else{
                 System.out.println(Brigand.nom + "est touché et s'effondre ! Il est hors d'état de nuire ! ");
-                Brigand.estblesse = false;
+                Brigand.estBlesse = false;
             }
             
         }
