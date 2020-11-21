@@ -1,4 +1,7 @@
 package western;
+/**
+ * @author Baurens.Damien,Husson.Laetitia
+ */
 
 public class DameBrigand extends DameDetresse implements HorsLaLoi{
 
@@ -7,7 +10,17 @@ public class DameBrigand extends DameDetresse implements HorsLaLoi{
     public int recompense;
     public String look;
     public Boolean estEnPrison;
-
+    /**
+     * Constructeur de la classe DameBrigand
+     * @param nom
+     * @param boissonFavorite
+     * @param etat
+     * @param couleurRobe
+     * @param nbDameEnlevees
+     * @param recompense
+     * @param look
+     * @param estEnPrison
+     */
     //constructeurs
 
     public DameBrigand(String nom, String boissonFavorite, String etat, String couleurRobe, int nbDameEnlevees, int recompense, String look, Boolean estEnPrison){

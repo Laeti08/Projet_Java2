@@ -1,5 +1,7 @@
 package western;
-
+/**
+ * @author Baurens.Damien,Husson.Laetitia
+ */
 public class Ripoux extends Sherif implements HorsLaLoi{
     //Attribut
     public int nbDamesEnlevees;
@@ -9,8 +11,8 @@ public class Ripoux extends Sherif implements HorsLaLoi{
     
 
     //Constructeur
-    public Ripoux(int nbDamesEnlevees, int recompense, String look, Boolean estEnPrison,int nbBrigandCoffre,int popularite,String adjectif,String nom,String boissonFavorite,Boolean estPrecis){
-    super(nbBrigandCoffre,popularite, adjectif,nom, boissonFavorite,estPrecis);
+    public Ripoux(int nbDamesEnlevees, int recompense, String look, Boolean estEnPrison,int nbBrigandCoffre,int popularite,String adjectif1,String adjectif2,String nom,String boissonFavorite,Boolean estPrecis){
+    super(nbBrigandCoffre,popularite, adjectif1,adjectif2,nom, boissonFavorite,estPrecis);
     this.nbDamesEnlevees=nbDamesEnlevees;
     this.recompense=recompense;
     this.look=look;

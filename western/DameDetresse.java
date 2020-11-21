@@ -1,5 +1,7 @@
 package western;
-
+/**
+ * @author Baurens.Damien,Husson.Laetitia
+ */
 public class DameDetresse extends Humain implements VisagePale{
     
     //attributs

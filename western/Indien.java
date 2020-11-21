@@ -1,5 +1,7 @@
 package western;
-
+/**
+ * @author Baurens.Damien,Husson.Laetitia
+ */
 public class Indien extends Humain{
     //Attribut
     public int nbPlumes;

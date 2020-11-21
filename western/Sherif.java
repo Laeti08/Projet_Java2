@@ -1,4 +1,7 @@
 package western;
+/**
+ * @author Baurens.Damien,Husson.Laetitia
+ */
 
 public class Sherif extends Cowboy{
 
@@ -7,8 +10,8 @@ public class Sherif extends Cowboy{
      
  
      //Constructeur
-     public Sherif(int nbBrigandCoffreEmprisonne, int popularite, String adjectif, String nom, String boissonFavorite,Boolean estPrecis){
-        super(popularite,adjectif,nom,boissonFavorite,estPrecis);
+     public Sherif(int nbBrigandCoffreEmprisonne, int popularite, String adjectif1,String adjectif2, String nom, String boissonFavorite,Boolean estPrecis){
+        super(popularite,adjectif1,adjectif2,nom,boissonFavorite,estPrecis);
       
         this.nbBrigandCoffre = nbBrigandCoffre;
          

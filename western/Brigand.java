@@ -1,4 +1,7 @@
 package western;
+/**
+ * @author Baurens.Damien,Husson.Laetitia
+ */
 
 public class Brigand extends Humain implements HorsLaLoi{
     //Attribut
@@ -8,7 +11,14 @@ public class Brigand extends Humain implements HorsLaLoi{
     public Boolean estEnPrison;
     public Boolean estBlesse;
     
-
+    /**
+     * Constructeur de la classe Brigand qui herite de la classe humain et qui est implemente dans l'interface HorsLaLoi
+     * @param nbDamesEnlevees le nombre de dames enlevees
+     * @param recompense la recompense qui est fixe sur la tete du brigand
+     * @param look le style que le brigand adopte
+     * @param nom le nom du brigand
+     * @param boissonFavorite la boisson favorite du brigand
+     */
     // Constructeur
     public Brigand(int nbDamesEnlevees, int recompense, String look, String nom, String boissonFavorite) {
         super(nom, boissonFavorite);

@@ -1,4 +1,7 @@
 package western;
+/**
+ * @author Baurens.Damien,Husson.Laetitia
+ */
 
 public class Joueur extends Cowboy {
     //attributs
@@ -11,7 +14,7 @@ public class Joueur extends Cowboy {
     //constructeur
     public Joueur(int popularite, String adjectif1,String adjectif2,String nom, String boissonFavorite, Boolean estPrecis){
         
-        super(popularite, boissonFavorite, nom, adjectif1,adjectif2, estPrecis);
+        super(popularite, adjectif1,adjectif2,nom, boissonFavorite,  estPrecis);
         this.estAthletique = false;
         this.estDiscret = false;
         this.estResistantAlcool=false;

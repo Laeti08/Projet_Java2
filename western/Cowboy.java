@@ -1,4 +1,7 @@
 package western;
+/**
+ * @author Baurens.Damien,Husson.Laetitia
+ */
 import java.util.Random;
 
 public class Cowboy extends Humain{
@@ -7,21 +10,26 @@ public class Cowboy extends Humain{
     public String adjectif1;
     public String adjectif2;
     public Boolean estPrecis;
-
+    /**
+     * Constructeur de la classe Cowboy qui herite de la classe Humain
+     * @param popularite son niveau de popularite
+     * @param adjectif1 le premier adjectif qui definit le cowboy
+     * @param adjectif2 le deuxieme adjectif qui definit le cowboy
+     * @param nom le nom du cowboy  
+     * @param boissonFavorite la boisson favorite du cowboy
+     * @param estprecis Sa capacite a etre precis ou non 
+     */
     //Constructeur
     public Cowboy(int popularite, String adjectif1,String adjectif2,String nom, String boissonFavorite, Boolean estprecis){
         super(nom, boissonFavorite);
         this.popularite = popularite;
         this.adjectif1 = adjectif1;
         this.adjectif2 = adjectif2;
-        this.estPrecis=estPrecis;
+        this.estPrecis=false;
     }
 
     //Methode
-    public int de100(){
-        Random rand = new Random();
-        return rand.nextInt(100 - 1 + 1) + 1;
-    }
+    
 
     public void tirer(Brigand Brigand){
         System.out.println(this.nom +" " +  this.adjectif1 + " tire sur " + Brigand.nom + " ! ce gredin l'a bien mérité de toute façon ! ");
