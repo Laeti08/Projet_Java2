@@ -1,14 +1,18 @@
 package western;
+
 /**
  * @author Baurens.Damien,Husson.Laetitia
  */
-
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.File;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -18,8 +22,70 @@ public class Main {
         Boolean retour2=true;
         Boolean version=true;
         Boolean end=false;
+        ArrayList<String> personnageFeminin = new ArrayList<String>();
+        ArrayList<String> personnageMasculin = new ArrayList<String>();
+        try {
 
+            File f = new File("C:/Users/husso/Downloads/Cours/4ème année/Module/Semestre 1/Java/Projet_Munchkin/Projet_Java2/western/nomPersonnageFemme.txt");
 
+            BufferedReader b = new BufferedReader(new FileReader(f));
+            
+            File f1 = new File("C:/Users/husso/Downloads/Cours/4ème année/Module/Semestre 1/Java/Projet_Munchkin/Projet_Java2/western/nomPersonnageHomme.txt");
+
+            BufferedReader b1 = new BufferedReader(new FileReader(f1));
+
+            String readLine = "";
+
+            System.out.println("Reading file using Buffered Reader");
+
+            while ((readLine = b.readLine()) != null) {
+                
+                personnageFeminin.add(new String(readLine));
+
+            }
+            
+            while ((readLine = b1.readLine()) != null) {
+                
+                personnageMasculin.add(new String(readLine));
+
+            }
+            
+
+        } 
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        //Création des différents personnages
+        int compteur=0;
+        Random rand = new Random();
+        int indice=rand.nextInt(personnageFeminin.size()-1 + 1);
+        int indice2=rand.nextInt(personnageFeminin.size()-1 + 1);
+        for (String c:personnageFeminin){
+            if(compteur==indice){
+                DameDetresse Damedetresse1=new DameDetresse(c,"Vin blanc","libre","rouge");
+                
+            }
+            compteur++;
+            System.out.println(c);
+        }
+
+        for (String c:personnageMasculin){
+            if(compteur==indice){
+                Brigand Georges=new Brigand(1,500,"Sadique",c,"Biere");
+                
+            }
+            else if(compteur==indice2){
+                Ripoux Wayne=new Ripoux(10,5000,"Confiant",false,3,10,"charismatique","Hautain",c,"the",false);
+            }
+            System.out.println(c);
+            compteur++;
+        }
+    
+        Barman Bob=new Barman("Le coyote","Bob","Eau");        
+        Brigand Georges=new Brigand(1,500,"Sadique","Georges","Biere");
+        Indien Joe=new Indien(10,"aigle","Joe","the");
+        
+        //Création du personnage du joueur
         System.out.println("Création de personnage : Vous êtes un Cowboy exerçant dans le Colorado en 1850. Choisissez 2 traits qui vous caractérisent parmis les 5 suivants :");
         System.out.println("1: Vous êtes discret");
         System.out.println("2 : Vous êtes charismatique");
@@ -56,7 +122,7 @@ public class Main {
         }
         System.out.println("Vous venez de selectionner votre premier attribut : "+attribut1);
         System.out.println("Maintenant selectionnez le deuxieme.");
-        //attribut2=attribut1;
+        
         
 
         while(!attribut2.equals("0")&& !attribut2.equals("1")&& !attribut2.equals("2")&& !attribut2.equals("3")&& !attribut2.equals("4")&& !attribut2.equals("5")&& !attribut2.equals("6")&& !attribut2.equals("7")&& !attribut2.equals("8")&&!attribut2.equals("9")){
@@ -90,21 +156,13 @@ public class Main {
         System.out.println("Veuillez entrer votre nom");
         String nom="";
         nom=keyboard.nextLine();
+        System.out.println("Veuillez entrer le nom de votre boisson favorite");
+        String boissonFav="";
+        nom=keyboard.nextLine();
 
-        ArrayList<Humain> personnage = new ArrayList<Humain>();
-        Barman Bob=new Barman("Le coyote","Bob","Eau");
-        personnage.add(new Barman("Le coyote","Bob","Eau"));
-        Brigand Georges=new Brigand(1,500,"Sadique","Georges","Biere");
-        personnage.add(new Brigand(1,500,"Sadique","Georges","Biere"));
-        Joueur joueur=new Joueur(2,attribut1,attribut2,nom,"boissonFav",false);
-        personnage.add(new Joueur(2,attribut1,attribut2,nom,"boissonFav",false));//Joueur 
+        Joueur joueur=new Joueur(2,attribut1,attribut2,nom,boissonFav,false);
         
-        
-        Indien Joe=new Indien(10,"aigle","Joe","the");
-        personnage.add(new Indien(10,"aigle","Joe","the"));
-        //Ripoux Wayne=new Ripoux(10,5000,"Confiant",false,3,10,"charismatique","Wayne","the",false);
-        //personnage.add(new Ripoux(10,5000,"Confiant",false,3,10,"charismatique","Wayne","the",false));
-        
+        //Début de l'histoire
         System.out.println("Le duel bat son plein. Vous avez traqué ce brigand pendant plusieurs semaines et le voilà enfin à l'autre bout de votre pistolet. Le saligaud tente tout pour vous rendre la vie dure. Il vous tire dessus, cours, se cache, mais rien n'y fait : Vous le suivez à la trace.");
         System.out.println("1 : vous lui tirez dessus");
         System.out.println("2 : vous tentez un plaquage");
@@ -134,6 +192,7 @@ public class Main {
             }
             else if(choix1.equals("1")){
                 System.out.println("Sans autre forme de sommation, Vous décider qu'il est grand temps de lui faire arrêter sa cavale par le feu. vous tirez dans sa direction.");
+                joueur.tirer(Georges);
                 if(joueur.estPrecis==true){
                     System.out.println("Vous lui tirez précisément une balle dans la jambe et une dans le bras, ce qui le fait tomber et lâcher son arme. Le voilà à votre merci.");
                     retour=false;
@@ -179,7 +238,9 @@ public class Main {
             System.out.println("Vous ne pouvez choisir que l'option 1 ou l'option 2");
             choix2=keyboard.nextLine(); 
         }
-        System.out.println("Vous livrez le bandit au shérif (getrecompense). Il vous remercie. C'est le soir. Vous êtes fatigué, assoiffé et affamé. Vous rentrez à l'unique auberge du village, et vous commandez à manger ainsi que votre boisson préférée. Pendant que vous mangez au bar, un habitué arrive et vous dit :");
+        System.out.println("Vous livrez le bandit au shérif. Il vous remercie. C'est le soir. Vous êtes fatigué, assoiffé et affamé. Vous rentrez à l'unique auberge du village, et vous commandez à manger ainsi que votre boisson préférée. ");
+        Bob.sert(joueur);
+        System.out.println("Pendant que vous mangez au bar, un habitué arrive et vous dit :");
         System.out.println("Je vois que vous avez bon goût ! nous avons la même boisson préférée ! Que diriez vous de savoir lequel de nous 2 la tient mieux ? Je parie 100 dollars que c'est moi ! Alors, partant ?");
         Georges.getRecompense();
         Georges.seFaireEmprisonner(joueur);
@@ -205,18 +266,15 @@ public class Main {
                 switch(choix6){
                     case "1":
                         System.out.println("La demoiselle s'exclame :<<Oh ça va ! Je me suis faite pousser, ça arrive, et en plus vous aviez presque fini ! >>. Le ton monte, et après vous avoir fusillé du regard, elle quitte l'auberge.");
-                        DameBrigand Ellen=new DameBrigand("Ellen","Vin blanc","libre","rouge",3,1500,"Malicieuse",false);
-                        personnage.add(new DameBrigand("Ellen","Vin blanc","libre","rouge",3,1500,"Malicieuse",false));
+                       
                         break;
                     case "2":
                         System.out.println("Votre blague permet de détendre la pauvre femme qui semble d'ailleurs s'être fait pousser. Elle vous adresse un sourire et repart danser.");
-                        DameDetresse Ellene=new DameDetresse("Ellen","Vin blanc","kidnappe","blanc");
-                        personnage.add(new DameDetresse("Ellen","Vin blanc","kidnappe","blanc"));
+                        
                         break;
                     case "3":
                         System.out.println("La demoiselle s'excuse platement. Vous voyant stoïque comme une pierre, elle en déduit que vous devez être trop ivre pour réaliser ce qui vous arrive et repart danser.");
-                        DameDetresse Ellene1=new DameDetresse("Ellen","Vin blanc","kidnappe","blanc");
-                        personnage.add(new DameDetresse("Ellen","Vin blanc","kidnappe","blanc"));
+                        
                         break;
                 }
                 System.out.println("Le reste de la soirée est plutôt calme. Après avoir payé votre chambre, vous allez vous coucher. Le lendemain, vous êtes convoqué par le shérif qui vous demande pour une mission importante, et surtout très bien payée. Vous vous rendez donc chez lui pour obtenir plus d'informations.");
@@ -271,18 +329,15 @@ public class Main {
                     switch(choix6){
                         case "1":
                             System.out.println("La demoiselle s'exclame :<<Oh ça va ! Je me suis faite pousser, ça arrive, et en plus vous aviez presque fini ! >>. Le ton monte, et après vous avoir fusillé du regard, elle quitte l'auberge.");
-                            DameBrigand Ellen=new DameBrigand("Ellen","Vin blanc","libre","rouge",3,1500,"Malicieuse",false);
-                            personnage.add(new DameBrigand("Ellen","Vin blanc","libre","rouge",3,1500,"Malicieuse",false));
+                            
                             break;
                         case "2":
                             System.out.println("Votre blague permet de détendre la pauvre femme qui semble d'ailleurs s'être fait pousser. Elle vous adresse un sourire et repart danser.");
-                            DameDetresse Ellene=new DameDetresse("Ellen","Vin blanc","kidnappe","blanc");
-                            personnage.add(new DameDetresse("Ellen","Vin blanc","kidnappe","blanc"));
+                            
                             break;
                         case "3":
                             System.out.println("La demoiselle s'excuse platement. Vous voyant stoïque comme une pierre, elle en déduit que vous devez être trop ivre pour réaliser ce qui vous arrive et repart danser.");
-                            DameDetresse Ellene1=new DameDetresse("Ellen","Vin blanc","kidnappe","blanc");
-                            personnage.add(new DameDetresse("Ellen","Vin blanc","kidnappe","blanc"));
+                            
                             break;
                     }
                     System.out.println("Le reste de la soirée est plutôt calme. Après avoir payé votre chambre, vous allez vous coucher. Le lendemain, vous êtes convoqué par le shérif qui vous demande pour une mission importante, et surtout très bien payée. Vous vous rendez donc chez lui pour obtenir plus d'informations.");
@@ -310,18 +365,15 @@ public class Main {
             switch(choix6){
                 case "1":
                     System.out.println("La demoiselle s'exclame :<<Oh ça va ! Je me suis faite pousser, ça arrive, et en plus vous aviez presque fini ! >>. Le ton monte, et après vous avoir fusillé du regard, elle quitte l'auberge.");
-                    DameBrigand Ellen=new DameBrigand("Ellen","Vin blanc","libre","rouge",3,1500,"Malicieuse",false);
-                    personnage.add(new DameBrigand("Ellen","Vin blanc","libre","rouge",3,1500,"Malicieuse",false));
+                   
                     break;
                 case "2":
                     System.out.println("Votre blague permet de détendre la pauvre femme qui semble d'ailleurs s'être fait pousser. Elle vous adresse un sourire et repart danser.");
-                    DameDetresse Ellene=new DameDetresse("Ellen","Vin blanc","kidnappe","blanc");
-                    personnage.add(new DameDetresse("Ellen","Vin blanc","kidnappe","blanc"));
+                    
                     break;
                 case "3":
                     System.out.println("La demoiselle s'excuse platement. Vous voyant stoïque comme une pierre, elle en déduit que vous devez être trop ivre pour réaliser ce qui vous arrive et repart danser.");
-                    DameDetresse Ellene1=new DameDetresse("Ellen","Vin blanc","kidnappe","blanc");
-                    personnage.add(new DameDetresse("Ellen","Vin blanc","kidnappe","blanc"));
+                    
                     break;
             }
             System.out.println("Le reste de la soirée est plutôt calme. Après avoir payé votre chambre, vous allez vous coucher. Le lendemain, vous êtes convoqué par le shérif qui vous demande pour une mission importante, et surtout très bien payée. Vous vous rendez donc chez lui pour obtenir plus d'informations.");
