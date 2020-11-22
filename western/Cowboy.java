@@ -10,6 +10,7 @@ public class Cowboy extends Humain{
     public String adjectif1;
     public String adjectif2;
     public Boolean estPrecis;
+    
     /**
      * Constructeur de la classe Cowboy qui herite de la classe Humain
      * @param popularite son niveau de popularite
@@ -27,10 +28,15 @@ public class Cowboy extends Humain{
         this.adjectif2 = adjectif2;
         this.estPrecis=false;
     }
-
-    //Methode
     
-
+    
+    //Methodes
+    /**
+     * Cette méthode fait tirer le cowboy sur le brigand dont le nom est renseigné en paramètre.
+     * Le Cowboy a 80% de chance de toucher si il est précis, 65% sinon.
+     * @param Brigand
+     */
+    //tirer
     public void tirer(Brigand Brigand){
         System.out.println(this.nom +" " +  this.adjectif1 + " tire sur " + Brigand.nom + " ! ce gredin l'a bien mérité de toute façon ! ");
         int jetdes = de100();
@@ -57,12 +63,21 @@ public class Cowboy extends Humain{
 
     }
 
+    /**
+     * Le Cowboy libère la dame en détresse dont le nom est renseigné en paramètres
+     * @param Dame
+     */
+    //libererDame
     public void libererDame(DameDetresse Dame){
         System.out.println(this.nom + " libère la pauvre " + Dame.nom + ".");
         Dame.seFaireLiberer(this.nom);
 
     }
-
+   
+    /**
+     * Le Cowboy se présente.
+     */
+    //sePresenter
     public void sePresenter(){
         this.parle("Je suis " + this.nom );
         

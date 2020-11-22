@@ -12,14 +12,14 @@ public class DameBrigand extends DameDetresse implements HorsLaLoi{
     public Boolean estEnPrison;
     /**
      * Constructeur de la classe DameBrigand
-     * @param nom
-     * @param boissonFavorite
-     * @param etat
-     * @param couleurRobe
-     * @param nbDameEnlevees
-     * @param recompense
-     * @param look
-     * @param estEnPrison
+     * @param nom Nom de la Dame Brigand
+     * @param boissonFavorite boisson favorite de la dame Brigand
+     * @param etat Si la dame brigand est libre ou enlevée
+     * @param couleurRobe couleur de la robe de la dame brigand
+     * @param nbDameEnlevees nombre de dames enlevées par la dame Brigand
+     * @param recompense récompense sur la tête de la dame brigand
+     * @param look apparence de la dame brigand
+     * @param estEnPrison renseigne si la dame brigand est en prison ou non
      */
     //constructeurs
 
@@ -30,8 +30,13 @@ public class DameBrigand extends DameDetresse implements HorsLaLoi{
         this.look = look;
         this.estEnPrison = estEnPrison;
     }
-
+    
+    /**
+     * 
+     */
+    //seFaireEmprisonner
     @Override
+    
     public void seFaireEmprisonner(Cowboy nomCowboy) {
         // TODO Auto-generated method stub
         this.estEnPrison = true ;

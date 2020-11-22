@@ -4,7 +4,7 @@ package western;
  */
 
 public interface HorsLaLoi{
-
+    
     public void seFaireEmprisonner(Cowboy nomCowboy);
 
     

@@ -30,29 +30,47 @@ public class Brigand extends Humain implements HorsLaLoi{
     }
 
     //Methode
-
+    /**
+     * Cette méthode renvoie la récompense sur la tête du brigand, ainsi qu'un message de félicitations
+     */
+    //getRecompense
     public String getRecompense(){
         System.out.println("En remettant " + this.nom + "au shérif, vous avez gagné une récompense de " + Integer.toString(this.recompense) + "dollars. Bien joué ! ");
         return Integer.toString(this.recompense);
     }
 
-
+    /**
+     * Cette méthode fait s'échapper un brigand de prison
+     */
+    //echapper
     public void echapper(){
         this.recompense += 400;
         System.out.println(" C'est une catastrophe ! " + this.nom + " s'est échappé de la prison ! Cet homme est un danger public, il faut le rattraper !");
 
     }
-
-
+    
+    /**
+     * Cette méthode renvoie le nom du brigand
+     */
+    //quelEstTonNom
     public String quelEstTonNom(){
         return this.nom;
     }
 
+    /**
+     * Cette méthode fait se présenter le brigand
+     */
+    //sePresenter
     public void sePresenter(){
         parle("Mwé hé hé, bien le bonjour ! (Cet homme a l'air " + this.look + ", c'est sûrement un brigand !) On m'appelle " + this.nom + ". J'apprécie la bonne compagnie et croyez moi, il vaut mieux me compter au rang de ses amis qu'à celui de ces ennemis ! Je suis sûr que nous pouvons bien nous entendre ! ");
        
    }
-
+   
+    /**
+    * Cette méthode fait emprisonner le brigand, et le fait maudire le cowboy à cause de qui il se fait enfermer.
+    * @param nomCowboy
+    */
+    //seFaireEmprisonner
    @Override
    public void seFaireEmprisonner(Cowboy nomCowboy) {
        // TODO Auto-generated method stub
@@ -63,7 +81,11 @@ public class Brigand extends Humain implements HorsLaLoi{
         this.parle("Ne crois pas que " + this.nom + " a dit son dernier mot ! " + nomCowboy.nom +" ! Je te retrouverai, et ma vengeance sera terrible ! ");
 
    }
-
+    /**
+    * Cette méthode fait kidnapper une dame par le brigand, qui prend + 500$ de primes sur sa tête en conséquences 
+    * @param nomDame
+    */
+    //kidnapperDame
    @Override
    public void kidnapperDame(DameDetresse nomDame) {
        // TODO Auto-generated method stub

@@ -20,8 +20,8 @@ public class Barman extends Humain{
 
 
     /**
-     * 
-     * @param nomHumain
+     * Cette méthode fait en sorte que le barman serve sa boison favorite à l'humain dont le nom est en paramètres
+     * @param nomHumain le nom de l'humain servi
      */
     //Methode
     public void sert(Humain nomHumain){
@@ -29,11 +29,18 @@ public class Barman extends Humain{
 
     }
 
+    /**
+     * Cette méthode permet au barman de dire ce qu'on veut lui faire dire
+     * @param phrase
+     */
     public void parle(String phrase){
-        System.out.println(phrase);
+        System.out.println(this.nom + " : " + phrase);
 
     }
-
+    
+    /**
+     * Cette méthode fait se présenter le barman
+     */
     public void sePresenter(){
         parle("Bienvenue au bar " + this.nomBar + ". Je suis " + this.nom + ", et je suis le barman. Si vous comptez m'offrir à boire, offrez moi " + this.boissonFavorite + ".");
     }

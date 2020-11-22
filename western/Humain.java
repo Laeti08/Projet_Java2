@@ -24,10 +24,17 @@ public abstract class Humain {
     }
 
     //méthodes
+
+    /**
+     * renvoie un entier aléatoire entre 1 et 100
+     * @return
+     */
+    //de100
     public static int de100(){
         Random rand = new Random();
         return rand.nextInt(100 - 1 + 1) + 1;
     }
+    
     /**
      * Methode qui permet au personnage de parle
      * @param phrase ce que le personnage dit
@@ -42,14 +49,14 @@ public abstract class Humain {
         parle("Bonjour, je me presente, je suis"+nom);
     }
     /**
-     * Accesseur de l'attribut nom (revoir c'est peut etre un mutateur )
+     * Accesseur de l'attribut nom 
      * @return le nom du personnage
      */
     protected String quelEstTonNom(){
         return this.nom;
     }
     /**
-     * Accesseur de l'attribut boisson favorite (revoir c'est peut etre un mutateur )
+     * Accesseur de l'attribut boisson favorite 
      * @return la boisson favorite du personnage
      */
     public String getBoisson(){
