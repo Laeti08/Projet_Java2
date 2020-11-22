@@ -26,11 +26,11 @@ public class Main {
         ArrayList<String> personnageMasculin = new ArrayList<String>();
         try {
 
-            File f = new File("C:/Users/husso/Downloads/Cours/4ème année/Module/Semestre 1/Java/Projet_Munchkin/Projet_Java2/western/nomPersonnageFemme.txt");
+            File f = new File("western/nomPersonnageFemme.txt");
 
             BufferedReader b = new BufferedReader(new FileReader(f));
             
-            File f1 = new File("C:/Users/husso/Downloads/Cours/4ème année/Module/Semestre 1/Java/Projet_Munchkin/Projet_Java2/western/nomPersonnageHomme.txt");
+            File f1 = new File("western/nomPersonnageHomme.txt");
 
             BufferedReader b1 = new BufferedReader(new FileReader(f1));
 
