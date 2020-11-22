@@ -59,31 +59,41 @@ public class Main {
         int indice=rand.nextInt(personnageFeminin.size()-1 + 1);
         int indice2=rand.nextInt(personnageMasculin.size()-1 + 1);
         int indice3=rand.nextInt(personnageMasculin.size()-1 + 1);
+        String nomDame="";
+        String nomBrigand="";
+        String nomSherif="";
         for (String c:personnageFeminin){
             if(compteur==indice){
-                DameDetresse Damedetresse1=new DameDetresse(c,"Vin blanc","libre","rouge");
-                
+                nomDame=c;
             }
             compteur++;
             
         }
-
+        DameDetresse Damedetresse1=new DameDetresse(nomDame,"Vin blanc","libre","rouge");
+        Damedetresse1.sePresenter();
         for (String c:personnageMasculin){
             if(compteur==indice2){
-                Brigand Georges=new Brigand(1,500,"Sadique",c,"Biere");
-                
+                nomBrigand=c;
             }
             else if(compteur==indice3){
-                Ripoux Wayne=new Ripoux(10,5000,"Confiant",false,3,10,"charismatique","Hautain",c,"the",false);
+                nomSherif=c;
             }
             
             compteur++;
         }
+        Brigand Brigand1=new Brigand(1,500,"Sadique",nomBrigand,"Biere");
+        Brigand1.sePresenter();
+
+        Sherif Wayne=new Sherif(10,5000,"Confiant","charismatique",nomSherif,"biere",true);
+        Wayne.sePresenter();
     
-        Barman Bob=new Barman("Le coyote","Bob","Eau");        
+        Barman Bob=new Barman("Le coyote","Bob","Eau"); 
+        Bob.sePresenter();       
         Brigand Georges=new Brigand(1,500,"Sadique","Georges","Biere");
+        Georges.sePresenter();
         Indien Joe=new Indien(10,"aigle","Joe","the");
-        
+        Joe.sePresenter();
+
         //Création du personnage du joueur
         System.out.println("Création de personnage : Vous êtes un Cowboy exerçant dans le Colorado en 1850. Choisissez 2 traits qui vous caractérisent parmis les 5 suivants :");
         System.out.println("1: Vous êtes discret");

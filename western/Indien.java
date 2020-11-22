@@ -37,7 +37,7 @@ public class Indien extends Humain{
     //sePresenter
     public void sePresenter(){
         super.sePresenter();
-        parle("J'ai "+this.nbPlumes+" et "+this.totem);
+        parle("J'ai "+this.nbPlumes+" plumes et voici mon totem : "+this.totem);
 
     }
 
