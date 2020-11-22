@@ -16,6 +16,8 @@ public class Main {
         Boolean retour1=true;
         Boolean tropBu=false;
         Boolean retour2=true;
+        Boolean version=true;
+        Boolean end=false;
 
 
         System.out.println("Création de personnage : Vous êtes un Cowboy exerçant dans le Colorado en 1850. Choisissez 2 traits qui vous caractérisent parmis les 5 suivants :");
@@ -345,9 +347,11 @@ public class Main {
         switch(choix7){
             case "1":
                 if(joueur.adjectif1.equals("estDiscret")|| joueur.adjectif2.equals("estDiscret")){
-                    System.out.println("ous attendez la nuit pour vous infiltré dans le camp. Ayant une discrétion à toute épreuve, vous déjouez sans problème la vigilance des gardes. Vous fouillez les tipies un par un. Lorsque vous arrivez au dernier, qui n'est autre que celui du grand chef, vous vous rendez à l'évidence : il n'y a aucune trace de la fille.\nRéveiller le grand chef pour le menacer n'y change rien. Appeuré, il n'a aucune idée de ce dont vous lui parlez. \nVous revenez bredouille mais indemne du camp");
-                    
-                }
+                    System.out.println("Vous attendez la nuit pour vous infiltré dans le camp. Ayant une discrétion à toute épreuve, vous déjouez sans problème la vigilance des gardes. Vous fouillez les tipies un par un. Lorsque vous arrivez au dernier, qui n'est autre que celui du grand chef, vous vous rendez à l'évidence : il n'y a aucune trace de la fille.\nRéveiller le grand chef pour le menacer n'y change rien. Appeuré, il n'a aucune idée de ce dont vous lui parlez. \nVous revenez bredouille mais indemne du camp");
+                    System.out.println("Vous revenez vers les hommes du shérif. Alors que vous commencez à relater les évènements du camp indien, ils sortent leur revolver et commencent à vous viser ! Les traitres! Constatant leur surnombre, vous n'avez d'autre choix que de vous jeter dans le fleuve afin d'échapper à leurs balles.");
+                    System.out.println("De toute évidence, quelqu'un voulait votre mort en même temps que celle des indiens. Il est temps de rendre une petite visite au shérif.");
+                    System.out.println("Une fois vos vêtements secs, Vous retournez en ville, aux abords de la maison du shérif.\nLe gredin semble savoir que vous avez survécu ! Il a doublé la garde ! Il va falloir donner le meilleur de vous même pour arriver jusqu'à lui !");
+                } 
                 else{
                     System.out.println("Vous tentez de pénétrer dans le camp indien sans vous faire repérer. Malheureusement, la discrétion n'est pas votre fort et vous vous faites capturer au moment de pénétrer dans la tente du grand chef.\nCe dernier, sévère mais avant tout étonné, vous demande ce que vous faites là.");
                     System.out.println("Que voulez vous faire ?");
@@ -357,11 +361,18 @@ public class Main {
                     choix8=keyboard.nextLine();
                     System.out.println("Vous avez choisi :"+ choix8);
                     if(choix8.equals("1")){
-
-
+                        System.out.println("Vous lui révélez le pourquoi de votre intrusion. Il lève un sourcil et dit : <<Je ne sais pas d'où vous tenez ces inepties, mais ma tribu n'a jamais enlevé de jeune fille. Ces méthodes déloyales appartiennent aux peaux blanches. Nous combattons fièrement pour mériter l'aval des dieux.>>");
+                        System.out.println("Soudain, coups de feu et cris retentissent. Manifestement, les hommes du shérif sont passé à l'attaque! Vous profitez de la situation pour vous enfuir, mais quelque chose cloche : vous aussi êtes la cible des balles qui fusent !\nVous parvenez in-extremis à défaire vos liens et à vous jeter dans le fleuve avant de vous faire trouer la peau");
+                        System.out.println("De toute évidence, quelqu'un voulait votre mort en même temps que celle des indiens. Il est temps de rendre une petite visite au shérif.");
+                        System.out.println("Une fois vos vêtements secs, Vous retournez en ville, aux abords de la maison du shérif.\nLe gredin semble savoir que vous avez survécu ! Il a doublé la garde ! Il va falloir donner le meilleur de vous même pour arriver jusqu'à lui !");
+                        
                     }
                     else if(choix8.equals("2")){
-
+                        System.out.println("Alors que vous gardez le silence, le grand chef, manifestement fatigué des agissement des peaux blanches, se saisit d'une hâche et la brandit au dessus de vous.");
+                        System.out.println("Soudain, coups de feu et cris retentissent. Manifestement, les hommes du shérif sont passé à l'attaque! Vous profitez de la situation pour vous enfuir, mais quelque chose cloche : vous aussi êtes la cible des balles qui fusent !\nVous parvenez in-extremis à défaire vos liens et à vous jeter dans le fleuve avant de vous faire trouer la peau");
+                        System.out.println("De toute évidence, quelqu'un voulait votre mort en même temps que celle des indiens. Il est temps de rendre une petite visite au shérif.");
+                        System.out.println("Une fois vos vêtements secs, Vous retournez en ville, aux abords de la maison du shérif.\nLe gredin semble savoir que vous avez survécu ! Il a doublé la garde ! Il va falloir donner le meilleur de vous même pour arriver jusqu'à lui !");
+                       
                     }
                     else{
                         System.out.println("Vous ne pouvez choisir que l'option 1 ou l'option 2");
@@ -380,11 +391,15 @@ public class Main {
                     choix9=keyboard.nextLine();
                     System.out.println("Vous avez choisi :"+ choix9);
                     if(choix9.equals("1")){
-
+                        System.out.println("Grâce à vous, les indiens tiennent bon et parviennent à repousser l'attaque. Il parviennent même à capturer l'un des brigands, qui révèle qu'il tient ses ordres du shérif lui même ! Traître ! Ripoux !\nLe grand chef, qui manifestement a le même ennemi que vous, se joint à vous pour aller rendre une petite visite au shérif.");
+                        version=false;
+                        
 
                     }
                     else if(choix9.equals("2")){
-
+                        System.out.println("Vous vous enfuyez en tirant partie de la confusion. Vous avez néanmoins en travers de la gorge cette trahison. De qui ces hommes tenaient-ils leurs ordres? Il est grand temps de rendre une petite visite au shérif.");
+                        System.out.println("Vous retournez en ville, aux abords de la maison du shérif.\nLe gredin semble savoir que vous avez survécu ! Il a doublé la garde ! Il va falloir donner le meilleur de vous même pour arriver jusqu'à lui !");
+                        
                     }
                     else{
                         System.out.println("Vous ne pouvez choisir que l'option 1 ou l'option 2");
@@ -392,16 +407,79 @@ public class Main {
                     }
                 }
                 else{
-                    System.out.println("Surestimant votre charisme, vous vous avancez seul vers le camp et commencez un discours grandiloquant exortant les indiens de vous remettre la fille qu'ils ont lâchement enlevé.\nVous êtes instantanément ligoté et emmené dans la tente du grand chef pour vous faire juger.\nLe grand chef commence : <<Je ne sais pas d'où vous tenez ces inepties, mais ma tribu n'a jamais enlevé de jeune fille. Ces méthodes déloyales appartiennent aux peaux blanches. Nous combattons fièrement pour mériter l'aval des dieux.>>\nSoudain, coups de feu et cris retentissent. Manifestement, les hommes du shérif sont passé à l'attaque! Vous profitez de la situation pour vous enfuir, mais quelque chose cloche : vous aussi êtes la cible des balles qui fusent ! \nVous parvenez in-extremis à défaire vos liens et à vous jeter dans le fleuve avant de vous faire trouer la peau");
+                    System.out.println("Surestimant votre charisme, vous vous avancez seul vers le camp et commencez un discours grandiloquant exortant les indiens de vous remettre la fille qu'ils ont lâchement enlevé.\nVous êtes instantanément ligoté et emmené dans la tente du grand chef pour vous faire juger.\nLe grand chef commence : <<Je ne sais pas d'où vous tenez ces inepties, mais ma tribu n'a jamais enlevé de jeune fille. Ces méthodes déloyales appartiennent aux peaux blanches. Nous combattons fièrement pour mériter l'aval des dieux.>>");
+                    System.out.println("Soudain, coups de feu et cris retentissent. Manifestement, les hommes du shérif sont passé à l'attaque! Vous profitez de la situation pour vous enfuir, mais quelque chose cloche : vous aussi êtes la cible des balles qui fusent !\nVous parvenez in-extremis à défaire vos liens et à vous jeter dans le fleuve avant de vous faire trouer la peau");
+                    System.out.println("De toute évidence, quelqu'un voulait votre mort en même temps que celle des indiens. Il est temps de rendre une petite visite au shérif.");
+                    System.out.println("Une fois vos vêtements secs, Vous retournez en ville, aux abords de la maison du shérif.\nLe gredin semble savoir que vous avez survécu ! Il a doublé la garde ! Il va falloir donner le meilleur de vous même pour arriver jusqu'à lui !");
+                                        
                 }
                 retour2=true;
                 break;
             case "3":
                 System.out.println("Vous vous rendez compte que vous n'êtes absolument pas assez nombreux lorsque vous voyez une quinzaine d'Indiens vous pointer avec vos arc. Avant même de pouvoir réagir, vous et vos compagnons êtes transpercés de flèches, et agonisez dans votre sang.\nRecharge de la partie :");
-                
+                end=true;
                 break;
         }
 
-        
+        if (version){
+            System.out.println("Que voulez vous faire ?");
+            System.out.println("1 : Tenter une approche furtive");
+            System.out.println("2 : Tenter de grimper directement vers la chambre du shérif");
+            System.out.println("3 : Commencer à tirer de loin sur les gardes");
+            String choix10="";
+            choix10=keyboard.nextLine();
+            System.out.println("Vous avez choisi :"+ choix10);
+            switch(choix10){
+                case "1":
+                    if(joueur.adjectif1.equals("estDiscret")|| joueur.adjectif2.equals("estDiscret")){
+                        System.out.println("Vous observez les rondes des ennemis et choisissez le meilleur moment pour lancer votre infiltration. Quelques esquives in-extremis plus tard, vous vous retrouvez dans la pièce du shérif, que vous parvenez à maîtriser grâce à l'effet de surprise");
+
+                    }
+                    else{
+                        System.out.println("Vous tentez de vous faufiler à l'intérieur en vous jouant des gardes. Malheureusement , vous n'avez manifestement pas assez travaillé vos inflitrations. Un garde vous repère et sonne l'alarme. Après vous être retranché comme vous pouvez, vous opposez une résistance des plus farouche avant de tomber sous les coups d'un ennemi bien trop nombreux.\nFin de partie.");
+                        end=true;
+                    }
+                    break;
+                case "2":
+                    if(joueur.adjectif1.equals("estAthletique")|| joueur.adjectif2.equals("estAthletique")){
+                        System.out.println("Vous parvenez à grimper à la fenêtre en un éclair. Avant même que le shérif ne s'en rende compte, vous êtes sur lui.");
+                    }
+                    else{
+                        System.out.println("L'escalade s'avère bien plus longue que vous ne l'auriez prévu ! Un garde passant par là fini par vous trouver et vous abat froidement.\nFin de partie.");
+                        end=true;
+                    }
+                    
+                    break;
+                case "3":
+                    if(tropBu){
+                        System.out.println("Votre pistolet explose au premier coup de feu que vous tirez ! Le shérif vous a refourgé un colt moisi ! le bruit trahissant votre présence, vous êtes rapidement retrouvé, arrêté, puis exécuté.\nFin de Partie");
+                        end=true;
+                    }
+                    else{
+                        if(joueur.adjectif1.equals("estPrecis")|| joueur.adjectif2.equals("estPrecis")){
+                            System.out.println("Un à un, les brigand tombent sous vos tirs dignes des plus grands snipers. Si bien qu'il n'y a vite plus aucun garde entre vous et le shérif, que vous parvenez à désarmer d'une balle bien placée.");
+                        }
+                        else{
+                            System.out.println("Malheuresement, tirer de cette distance s'avère bien plus compliqué que prévu ! Les gardes, alertés par les coups de feu, parviennent à s'approcher, et c'est au terme d'une bataille héroïque à 5 contre un que vous êtes finalement abattu.\nFin de partie.");
+                            end=true;
+                        }
+                    }
+                    
+                    break;
+            }
+            System.out.println("<<Maudit soyez vous ! s'écrie le shérif ! Vous êtes dans mes pattes depuis votre arrivée, à arrêter mes hommes sans arrêt ! Si je n'avais pas été servi par des incompétents,vous seriez morts en même temps que ces fichus indiens et j'aurais les mains libres à l'heure qu'il est ! >>");
+        }
+        else{
+            if(tropBu){
+                System.out.println("Vous tirez en premier mais votre pistolet explose ! Le shérif avait prévu le coup !\nIl s'avance vers vous, le pistolet à la main et le sourire aux lèvres.\nAh ! Au final c'est moi qui l'emporte ! Enfin je vais être débarrasé de vous ! Si vous saviez comme vous avez mis à mal mes opérations, en arrêtant mes hommes ! Cette nuit, en vous tuant vous et ces maudits indiens, je serais enfin libre de mes mouvements dans cette ville !\nIl vous vise pour vous exécuter.");
+            }
+            else{
+                System.out.println("Vous tirez en premier, et le shérif réplique. Vous combattez d'égal à égal pendant un certain temps.\nLe shérif, pendant le combat, s'écrie :<<Vous serez donc jusqu'à la fin dans mes pattes ! D'abord vous arrêtez mes hommes, et ensuite vous rameutez ces maudits indiens pour me pourrir la vie ! Lorsque j'en aurait fini avec vous tous, j'aurais enfin les mains libres !>>");
+            }
+            System.out.println("Soudain, une flèche fend l'air et se fige dans son torse. Vous vous retournez et voyez le grand chef indien, triste mais soulagé.");
+        }
+        if(end=false){
+            System.out.println("Une balle fuse et transperce la gorge du ripoux, qui git à présent sans vie sur son plus beau tapis. La femme qu'il vous avait demandé de retrouver et qu'il avait vraisemblablement enlevé lui même se trouve dans l'encadrement de la prote qui mène à la cave.\n<<Il semblerait que cette ville ait besoin d'un nouveau shérif !>> Dit-elle, avec assurance.\n<<Ca vous dirait de reprendre le job ? Vous semblez être le plus à même de faire règner la justice ici.>>.\nAcceptant votre nouvelle fonction, vous vous apprêtez à faire rentrer la ville dans une nouvelle ère.\nVous avez terminé le jeu ! Bravo et merci d'avoir joué !");
+        }
     }
 }
