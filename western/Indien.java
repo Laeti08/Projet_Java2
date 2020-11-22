@@ -8,7 +8,7 @@ public class Indien extends Humain{
     public String totem;
     
     /**
-     * Constructeur de la classe indien
+     * Constructeur de la classe indien qui herite de la classe humain
      * @param nbPlumes
      * @param totem
      * @param nom

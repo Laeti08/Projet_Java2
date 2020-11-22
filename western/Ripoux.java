@@ -10,7 +10,7 @@ public class Ripoux extends Sherif implements HorsLaLoi{
     public Boolean estEnPrison;
     
     /**
-     * Constructeur du ripoux
+     * Constructeur du ripoux qui herite de la classe Sherif et qui est implemente dans l'interface HorsLaLoi
      * @param nbDamesEnlevees nombre de dames enlevées par le ripoux
      * @param recompense récompense sur la tête du ripoux
      * @param look look du ripoux

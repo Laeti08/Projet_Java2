@@ -27,16 +27,14 @@ public class Main {
         try {
 
             File f = new File("western/nomPersonnageFemme.txt");
-
             BufferedReader b = new BufferedReader(new FileReader(f));
             
             File f1 = new File("western/nomPersonnageHomme.txt");
-
             BufferedReader b1 = new BufferedReader(new FileReader(f1));
 
             String readLine = "";
 
-            System.out.println("Reading file using Buffered Reader");
+            
 
             while ((readLine = b.readLine()) != null) {
                 
@@ -59,25 +57,26 @@ public class Main {
         int compteur=0;
         Random rand = new Random();
         int indice=rand.nextInt(personnageFeminin.size()-1 + 1);
-        int indice2=rand.nextInt(personnageFeminin.size()-1 + 1);
+        int indice2=rand.nextInt(personnageMasculin.size()-1 + 1);
+        int indice3=rand.nextInt(personnageMasculin.size()-1 + 1);
         for (String c:personnageFeminin){
             if(compteur==indice){
                 DameDetresse Damedetresse1=new DameDetresse(c,"Vin blanc","libre","rouge");
                 
             }
             compteur++;
-            System.out.println(c);
+            
         }
 
         for (String c:personnageMasculin){
-            if(compteur==indice){
+            if(compteur==indice2){
                 Brigand Georges=new Brigand(1,500,"Sadique",c,"Biere");
                 
             }
-            else if(compteur==indice2){
+            else if(compteur==indice3){
                 Ripoux Wayne=new Ripoux(10,5000,"Confiant",false,3,10,"charismatique","Hautain",c,"the",false);
             }
-            System.out.println(c);
+            
             compteur++;
         }
     
@@ -156,12 +155,13 @@ public class Main {
         System.out.println("Veuillez entrer votre nom");
         String nom="";
         nom=keyboard.nextLine();
+
         System.out.println("Veuillez entrer le nom de votre boisson favorite");
         String boissonFav="";
         nom=keyboard.nextLine();
 
         Joueur joueur=new Joueur(2,attribut1,attribut2,nom,boissonFav,false);
-        
+        System.out.println("Votre personnage est maintenant créé. L'histoire peut donc commencer.");
         //Début de l'histoire
         System.out.println("Le duel bat son plein. Vous avez traqué ce brigand pendant plusieurs semaines et le voilà enfin à l'autre bout de votre pistolet. Le saligaud tente tout pour vous rendre la vie dure. Il vous tire dessus, cours, se cache, mais rien n'y fait : Vous le suivez à la trace.");
         System.out.println("1 : vous lui tirez dessus");

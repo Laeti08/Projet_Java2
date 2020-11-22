@@ -10,7 +10,7 @@ public class DameDetresse extends Humain implements VisagePale{
     String couleurRobe;
     
     /**
-     * Constructeur de l'objet DameDetresse
+     * Constructeur de l'objet DameDetresse qui herite de la classe Humain et qui est implemente dans l'interface VisagePale
      * @param nom
      * @param boissonFavorite
      * @param etat

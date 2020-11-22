@@ -11,7 +11,7 @@ public class Joueur extends Cowboy {
     public Boolean estCharismatique ;
     public Boolean estResistantAlcool ;
     /**
-     * Constructeur de la classe joueur
+     * Constructeur de la classe joueur qui herite de la classe Humain
      * @param popularite popularité du joueur
      * @param adjectif1 premier attribut du joueur (sert pour la partie)
      * @param adjectif2 second attribut du joueur (sert pour la partie)

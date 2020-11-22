@@ -11,7 +11,7 @@ public class DameBrigand extends DameDetresse implements HorsLaLoi{
     public String look;
     public Boolean estEnPrison;
     /**
-     * Constructeur de la classe DameBrigand
+     * Constructeur de la classe DameBrigand qui herite de la classe DameDetresse et qui est implemente dans l'interface HorsLaloi
      * @param nom Nom de la Dame Brigand
      * @param boissonFavorite boisson favorite de la dame Brigand
      * @param etat Si la dame brigand est libre ou enlevée
